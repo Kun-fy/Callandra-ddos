@@ -28,7 +28,7 @@ class syn(threading.Thread):
             try:
                 self.syn.connect((self.ip, self.port))
                 print(f"\033[38;5;220m" +ip+ " \033[38;5;37m" +str(self)+ "")
-                print(f"\033[38;5;220m" +ip+ " \033[38;5;242m" +str(port)+ "")
+                print(f"\033[38;5;154m" +ip+ " \033[38;5;242m" +str(port)+ "")
             except:
                 pass
 
