@@ -21,7 +21,17 @@ print("""
    \033[38;5;220m ████┐──┘█│ █│  ╰───┘\033[36m ╰┘  ╰┘\033[33m  ╰───┘\033[38;5;206m ╰┘\033[37m       ╰───┘
    \033[37m ╰───┘   ╰┘ ╰┘
  """)
+while attemps < 100:
+    username = input("\033[32mJenenge scrip opotoh??:\033[30m")
+    password = input("\033[32mGemboke piro?:\033[30m")
 
+    if username == 'callandra' and password == 'callandra':
+        print("\033[32m⟩⟩ BLACK ARMY AREA \033[0m")
+        break
+    else:
+        print('Incorrect credentials. Check if you have Caps lock on and try again.')
+        attemps += 1
+        continue
 if len(sys.argv) < 4:
     print("UDP TCP SYN Flood")
     sys.exit("Usage: python "+sys.argv[0]+" [ip] [port] [size]")
