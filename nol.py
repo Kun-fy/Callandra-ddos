@@ -9,7 +9,7 @@ import socket
 
 if len(sys.argv) < 4:
     print("UDP TCP SYN Flood")
-    sys.exit("Usage: python "+sys.argv[0]+" <ip> <port> <size>")
+    sys.exit("Usage: python "+sys.argv[0]+" [ip] [port] [size]")
 
 ip = sys.argv[1]
 port = int(sys.argv[2])
@@ -27,7 +27,8 @@ class syn(threading.Thread):
         for i in range(self.packets):
             try:
                 self.syn.connect((self.ip, self.port))
-                print(f"\033[38;5;220m" +ip+ " \033[32m" +str(self)+ "")
+                print(f"\033[38;5;220m" +ip+ " \033[38;5;37m" +str(self)+ "")
+                print(f"\033[38;5;220m" +ip+ " \033[38;5;242m" +str(port)+ "")
             except:
                 pass
 
